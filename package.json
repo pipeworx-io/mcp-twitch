@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-twitch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Twitch MCP — wraps the Twitch Helix API (read-only)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-989377ed94d2b8f91673dfcf7de93dfb49d113f18ca4b3cb807f476fcc62c579",
-    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
+    "sourceHash": "v1-e8ac11cba2610a571c2236ad01296a4f732295683d7bfc44b94b5a88d2824bbd",
+    "sourceCommit": "66a0692f029179984440cef6938cba7fdd41d66d"
   }
 }
