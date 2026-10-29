@@ -1,0 +1,92 @@
+[
+  {
+    "name": "top_games",
+    "description": "Get the top games currently being streamed on Twitch, ranked by number of viewers. Returns game id, name, and box art. Example: top_games({ first: 20 })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "first": {
+          "type": "number",
+          "description": "Number of games to return (default 20, max 100)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Optional — your own Twitch credentials as CLIENT_ID:CLIENT_SECRET for higher limits; omit to use the shared Pipeworx key."
+        }
+      }
+    }
+  },
+  {
+    "name": "get_streams",
+    "description": "Get live Twitch streams, optionally filtered by game name and/or language. Returns streamer name, title, current viewer count, and thumbnail for each live stream. Omit `game` for the overall top live streams across Twitch. Example: get_streams({ game: \"Just Chatting\", first: 20, language: \"en\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "game": {
+          "type": "string",
+          "description": "Game NAME to filter by (e.g. \"Fortnite\", \"Just Chatting\"). Resolved to a game id automatically."
+        },
+        "first": {
+          "type": "number",
+          "description": "Number of streams to return (default 20, max 100)"
+        },
+        "language": {
+          "type": "string",
+          "description": "Optional ISO-639-1 language code to filter by, e.g. \"en\", \"es\", \"ja\"."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Optional — your own Twitch credentials as CLIENT_ID:CLIENT_SECRET for higher limits; omit to use the shared Pipeworx key."
+        }
+      }
+    }
+  },
+  {
+    "name": "search_channels",
+    "description": "Search Twitch channels/streamers by name or keyword. Returns matching channels with display name, the game they stream, whether they are live now, title, and thumbnail. Example: search_channels({ query: \"ninja\", live_only: true })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Search query — channel/streamer name or keyword, e.g. \"ninja\", \"valorant\"."
+        },
+        "first": {
+          "type": "number",
+          "description": "Number of channels to return (default 20, max 100)"
+        },
+        "live_only": {
+          "type": "boolean",
+          "description": "If true, only return channels that are currently live."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Optional — your own Twitch credentials as CLIENT_ID:CLIENT_SECRET for higher limits; omit to use the shared Pipeworx key."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_user",
+    "description": "Look up a Twitch user/channel by login (username). Returns profile info: id, display name, description, view count, broadcaster type, account creation date, and profile image. Example: get_user({ login: \"ninja\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "login": {
+          "type": "string",
+          "description": "Twitch username (login), e.g. \"ninja\", \"pokimane\"."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Optional — your own Twitch credentials as CLIENT_ID:CLIENT_SECRET for higher limits; omit to use the shared Pipeworx key."
+        }
+      },
+      "required": [
+        "login"
+      ]
+    }
+  }
+]

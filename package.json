@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-twitch",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Twitch MCP — wraps the Twitch Helix API (read-only)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-twitch": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "twitch"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-twitch.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/twitch",
   "pipeworx": {
-    "sourceHash": "v1-e8ac11cba2610a571c2236ad01296a4f732295683d7bfc44b94b5a88d2824bbd",
-    "sourceCommit": "66a0692f029179984440cef6938cba7fdd41d66d"
+    "mode": "gateway",
+    "slug": "twitch",
+    "gatewaySlug": "twitch",
+    "sourceHash": "v1-fd20d0373411d23f34308f2ae7af1c4c76b71c295171b7b18aabd2d5f4cf7533",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }
