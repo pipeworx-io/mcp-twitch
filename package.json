@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-twitch",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Twitch MCP — wraps the Twitch Helix API (read-only)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "twitch",
     "gatewaySlug": "twitch",
-    "sourceHash": "v1-fd20d0373411d23f34308f2ae7af1c4c76b71c295171b7b18aabd2d5f4cf7533",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-c8dcea63d042e798311700a7c2081e0086fc7d07133cff874ffd3dcef4c2df4d",
+    "sourceCommit": "868e119d526d5409447b7ee2149afba7eb9d2593"
   }
 }
