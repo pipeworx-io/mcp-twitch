@@ -70,7 +70,7 @@
     }
   },
   {
-    "name": "get_user",
+    "name": "twitch_get_user",
     "description": "Look up a Twitch user/channel by login (username). Returns profile info: id, display name, description, view count, broadcaster type, account creation date, and profile image. Example: get_user({ login: \"ninja\" })",
     "inputSchema": {
       "type": "object",
